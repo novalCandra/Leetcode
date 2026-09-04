@@ -15,7 +15,7 @@ console.log(map([1, 2, 3], plusI))
 const constant = () => 42;
 console.log(map([1, 2, 3], constant))
 
-let map = function (arr, fn) {
+let mapData = function (arr, fn) {
     let dataBilangan = arr;
     // fn = function () { };
     function plusone(n) {
