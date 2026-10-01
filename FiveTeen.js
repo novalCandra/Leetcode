@@ -1,80 +1,23 @@
-// // SPREAD JAVASCRIPT
-// function sum(x, y, z) {
-//     return x + y + z
-// }
+// Chunks Arrays;
+// var chunk = function (arr, size) {
+//   const array = [];
+//   for (let i = 0; i < arr.length; i += size) {
+//     array.push(arr.slice(i, i + size));
+//     console.log(array.push(i));
+//     console.log(`Slice arrays ${array.push(arr.slice(i))}`);
+//   }
+//
+//   return array;
+// };
 
-// const numbers = [1, 2, 3];
-// // console.log(sum(...numbers))
+var chunk = function (arr, size) {
+  return Array.from({ length: Math.ceil(arr.length / size) }, (_, index) =>
+    arr.slice(index * size, index * size + size),
+  );
+};
 
+let dataDumy = [1, 2, 3, 4, 5];
+chunk(dataDumy, 2);
 
-// let arr1 = [0, 1, 2, 3];
-// const arr2 = [4, 5, 6, 7];
-
-// let gabungkan = [...arr1, ...arr2]
-// console.log(gabungkan)
-
-
-// TRAINING TWO SUM
-
-// var TwoSumTrainig = function (nums, target) {
-//     for (let i = 0; i < nums.length; i++) {
-//         for (let j = i + 1; j < nums.length; j++) {
-//             if (nums[j] === target - nums[i]) {
-//                 return console.log([i, j])
-//             }
-//         }
-//     }
-//     return []
-// }
-
-// TwoSumTrainig([-1, -3, 4, 2], -4)
-
-
-// array
-[1, 2, 3, 4, "5"]
-
-
-// {
-//     "nama" : novel,
-//         "age" : 12,
-//             "perusahaan" : ["A", 'B', "C"]
-// }
-
-const testing = {
-    nama: [1, 2, 3, 4],
-}
-const arrayObject = [1, 2, 3, 4, {
-    nama: "nama",
-    age: 12
-}]
-
-
-// const cobakoBJECT = {
-//     "nama": "nama",
-//     "age": 12,
-//     "perushaan": "A",
-//     "alamat": "pasuruan"
-// }
-
-// // console.log(cobakoBJECT.age)
-
-// // delete cobakoBJECT.age
-// console.log(cobakoBJECT)
-
-
-const array = [1, 2, 4, 6];
-const array2 = array.map((item) => {
-    return item * 2
-})
-const array3 = array.forEach((item) => {
-    return item * 2
-})
-
-// const array4 = fo
-for (let i = 0; i < array.length; i++) {
-    console.log(i)
-}
-
-console.log(array2)
-console.log(array3)
-
+console.log(Array.from("savira"));
+console.log(Array.from([1, 2, 3], (x) => x + x));
