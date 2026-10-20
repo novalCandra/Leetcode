@@ -1,14 +1,14 @@
 // Chunks Arrays;
-// var chunk = function (arr, size) {
-//   const array = [];
-//   for (let i = 0; i < arr.length; i += size) {
-//     array.push(arr.slice(i, i + size));
-//     console.log(array.push(i));
-//     console.log(`Slice arrays ${array.push(arr.slice(i))}`);
-//   }
-//
-//   return array;
-// };
+var chunk = function (arr, size) {
+  const array = [];
+  for (let i = 0; i < arr.length; i += size) {
+    array.push(arr.slice(i, i + size));
+    console.log(array.push(i));
+    console.log(`Slice arrays ${array.push(arr.slice(i))}`);
+  }
+
+  return array;
+};
 
 var chunk = function (arr, size) {
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, index) =>

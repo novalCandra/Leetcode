@@ -44,5 +44,14 @@ var isPalindromeNumber = function (x) {
 };
 
 
-console.log(isPalindromeNumber(1))
-console.log(isPalindromeNumber(123))
+// console.log(isPalindromeNumber(1))
+// console.log(isPalindromeNumber(123))
+
+
+const dataTEXT = "Noval Candra";
+const dataTextPerbadingan = dataTEXT.slice(0, 5);
+if(dataTextPerbadingan !== "Noval"){
+    return console.log("nama tidak lengkap")
+}else{
+    return console.log("Nama Lengkap dan valid")
+}
